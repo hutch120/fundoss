@@ -2,7 +2,7 @@
 
 Ignoring Open Source Software funding is risky business!
 
-Pronounced `Fund O-S-S` or `fun-doss` we promote funding for your OSS package.
+Pronounced `fun-doss` (almost called it JAFO - Just Another Funding Option) for your OSS package.
 
 Add fundoss to your devDependencies, create the file `fundoss.json` with your payment checkout link, and we do the rest.
 
