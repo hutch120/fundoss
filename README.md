@@ -22,7 +22,7 @@ Create `fundoss.json` in your package root folder.
 
 ```
 {
-    checkout: '[Square | Stripe | OtherUrl]'
+    "checkout": "[Square | Stripe | OtherUrl]"
 }
 ```
 
@@ -51,7 +51,7 @@ We have no affiliation with SquareUp, but in our experience is the simplest to g
 - Build and strenghen the OSS community and avoid [this](https://github.com/pedronauck/docz/issues/1634).
 - Inspired in part by the [experiment by Feross](https://feross.org/funding-experiment-recap/)
 - You don't have to look far for very popular underfunded projects.
-- The OpenLayers mapping library is used for mapping. Despite an amazing community it is maintained by a few dedicated individuals all with other jobs. It has about 100,000 weekly downloads on NPM, yet the OpenCollective funding amounts to less than two coffees a day (~$8)
+- The OpenLayers package is used for mapping. Despite an amazing community it is maintained by a few dedicated individuals all with other jobs. It has about 100,000 weekly downloads on NPM, yet the OpenCollective funding amounts to less than two coffees a day (~$8)
 - Take [MouseTrap](https://github.com/ccampbell/mousetrap) as an example, 15K users 10K stars and a [Github issue lists](https://github.com/ccampbell/mousetrap/issues) full of feature requests that are unanswered by maintainers. No releases to MouseTrap in over 6 months and no major commits in well over a year with some features broken in major browsers.
 
 ## Definitions
