@@ -1,18 +1,32 @@
 # FundOSS
 
-Ignoring Open Source Software funding is risky business!
+**Ignoring Open Source Software funding is risky business!**
 
-Pronounced `fun-doss` (almost called it JAFO - Just Another Funding Option) for your OSS package.
+## Project
 
-Add fundoss to your devDependencies, create the file `fundoss.json` with your payment checkout link, and we do the rest.
+`[fun-doss]` a funding option for OSS packages.
 
-We commit to NEVER selling advertising or providing any data collected to 3rd parties. This project is OSS, you can view all the code used including the Lambda function.
+We commit to **NEVER** selling advertising or providing any data to 3rd parties. This project is OSS, you can view the upload code used which uploads the email address configured in package.json and the package names that have fundoss enabled. This data is then used to send an email to the email address with funding options. Thats it.
 
-**No data is sent without the permission of the Project Owner** This permission is granted by the Product Owner adding their email address to their product `package.json` `{ "fundoss": "product.owner@business.com" }. Instructions are output to the developer terminal on build if this information is missing.
+**No data is sent without the permission of the Project Owner** This permission is granted by the addition of an email address to `package.json` e.g. `{ "fundoss": "support@business.com" }. A message to prompt adding this configuration is output to the developer terminal if this information is missing.
 
-## Usage
+## Product Developers
 
-Add `fundoss` to your project.
+Please help support OSS by enabling us inform your business about the amazing OSS packages used by your company. Enter the support or sales email address into the product package.json.
+
+*package.json*
+
+```
+{
+    "name": "your-product",
+    "fundoss": "support@business.com",
+    ...
+}
+```
+
+## OSS Developers
+
+Add `fundoss` to your project and let us raise awaremess of your OSS package.
 
 ```
 yarn add fundoss --dev
@@ -33,6 +47,7 @@ Example fundoss.json
     "checkout": "https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJYKEMPA"
 }
 ```
+
 
 ## Fund this project :)
 
@@ -83,3 +98,7 @@ We have no affiliation with SquareUp, but in our experience is the simplest to g
 
 - This project only triggers our AWS lambda function if the Product Owners email has been entered in the products package.json.
 - The only information sent to the AWS lambda function is the Product Owners email and a list of packages with the fundoss included. Note this does NOT include the funding checkout link which is retrieved from the public Github package.
+
+## Shout out
+
+- Thanks to Feross for leading the charge. https://feross.org/funding-experiment-recap/
