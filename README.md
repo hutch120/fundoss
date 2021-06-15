@@ -18,9 +18,7 @@ Please help support OSS by enabling us inform your business about the amazing OS
 
 ```
 {
-    "name": "your-product",
     "fundoss": "support@business.com",
-    ...
 }
 ```
 
