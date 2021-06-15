@@ -14,7 +14,7 @@ We commit to **NEVER** selling advertising or providing any data to 3rd parties.
 
 ## Product Developers
 
-Please help support OSS by enabling us to inform your business about the amazing OSS packages used by your company. Enter the support or sales email address into the product package.json so we can inform your business about the many benefits of OSS and why they should support OSS.
+Please help support OSS by enabling us to inform your business about the amazing OSS packages used by your company. Enter the support or sales email address into your products package.json so we can inform your business about the many benefits of OSS and why they should support OSS.
 
 *package.json*
 
@@ -56,7 +56,7 @@ We have no affiliation with SquareUp, but in our experience is the simplest to g
 
 ## Fund this project :)
 
-Of course, if you are getting value from this project please pay it on!
+Of course, if you are getting value from this OSS package please pay it on!
 
 https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJYKEMPA
 
