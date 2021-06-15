@@ -5,8 +5,8 @@ var fundoss
 try {
     fundoss = require('../src')
 } catch (err) {
-    // Silently ignore syntax errors in Node.js 0.12 and 4. ?? I'm guessing anyone still using this isn't going to start funding OSS.
-    console.log('err', err)
+    // Silently ignore syntax errors in Node.js 0.12 and 4.
+    // console.log('err', err)
 }
 
 try {
