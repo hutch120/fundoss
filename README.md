@@ -14,13 +14,14 @@ We commit to **NEVER** selling advertising or providing any data to 3rd parties.
 
 ## Product Developers
 
-Please help support OSS by enabling us to inform your business about the amazing OSS packages used by your company. Enter the support or sales email address into your products package.json so we can inform your business about the many benefits of OSS and why they should support OSS.
+Please help support OSS by enabling us to inform your business about the amazing OSS packages used by your company. Enter the support or sales email address into your products package.json so we can inform your business about the many benefits of OSS and why they should support OSS. And if that's not enough... let us inform you, the developer, of the valuable work, like major updates to these OSS packages looking for support. Enter your email to get informed of package updates.
 
 *package.json*
 
 ```
 {
     "fundoss": "support@business.com",
+    "fundoss-developer": "tech@business.com"
 }
 ```
 
