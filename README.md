@@ -8,9 +8,9 @@ We believe OSS should be called **valuable**, not free. We believe that somethin
 
 `[fun-doss]` a funding option to shine a light on OSS packages by informing business of the value OSS provides.
 
-We commit to **NEVER** selling advertising or provide any data to 3rd parties. This project is OSS, you can view the upload code used which uploads the email address configured in package.json and the package names that have fundoss enabled. This data is then used to generate an OSS **Value Board** and (if provided) send an email to the Product Owner with a **Value Statement**. That's it.
+We commit to **NEVER** selling advertising or provide any data to 3rd parties. This project is OSS, you can view the upload code used which uploads the email address configured in package.json and the package names that have fundoss enabled. This data is then used to generate an OSS **Value Board** and, if provided, send an email to the Product Owner with a **Value Statement**. That's it.
 
-**No identifiable data is sent** Permission to send an email is given when it is added to `package.json`
+**No identifiable data is sent** other than the email address that is added specifically for fundoss in `package.json`
 
 A message to prompt adding an email is output to the developer terminal if this information is missing.
 
@@ -18,25 +18,19 @@ A message to prompt adding an email is output to the developer terminal if this 
 
 Please help support OSS by enabling us to inform your business about the amazing value OSS packages used by your company provide.
 
-Enter the support or sales email address of the product into package.json so we can inform your business about the many benefits of OSS and why they should support OSS.
+Enter the support or sales email address of the product into package.json so we can send a **Value Statement** to your business about the many benefits of OSS and funding options available.
 
 Edit `package.json` and add the following line and adjust the email address.
 
 ```
-{
-    "fundoss": "support@product.com"
-}
+"fundoss": "support@product.com"
 ```
-
-**fundoss**
-
-Email address used to send a **Value Statement**
 
 ## OSS Developers
 
 Add `fundoss` to your package and let us raise awareness of your OSS package to business and create an economic model for your OSS package to thrive. 
 
-If you exclude --dev fundoss will collect usage stats in the product's production environment (assuming the package is also used in the product dependancies.)
+If you exclude `--dev` fundoss will collect usage stats in the product's production environment (assuming the package is also used in the product dependancies.)
 
 ```
 yarn add fundoss --dev
@@ -52,7 +46,7 @@ Create `fundoss.json` in your package root folder.
 
 **checkout**
 
-This is a link we will include as part of the **Value Statement** and **Value Board**
+This is the link we will include as part of the **Value Statement** and **Value Board**
 
 E.g. We use a checkout link from SquareUp
 https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJYKEMPA
@@ -97,8 +91,8 @@ https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJY
 
 ## How does it work?
 
-- When a developer builds their project this package will search for `fundoss.json` files in node_modules and send the product owners email (or IP Address if this is missing) and the package names to our AWS lambda function.
-- This info will be collated and used to build a **Value Board** and send an email (at most once a week) to the Product Owners with some messaging about OSS funding.
+- When a product developer builds their project this package will search for `fundoss.json` files in node_modules and send the product owners email (or IP Address if this is missing) and the package names to our AWS lambda function.
+- This info will be collated and used to build a **Value Board** and to send an email (at most once a week) to the Product Owners with some messaging about OSS funding.
 
 ## What is communicated?
 
