@@ -8,26 +8,35 @@ We believe OSS should be called **valuable**, not free. We believe that somethin
 
 `[fun-doss]` a funding option to shine a light on OSS packages by informing business of the value OSS provides.
 
-We commit to **NEVER** selling advertising or providing any data to 3rd parties. This project is OSS, you can view the upload code used which uploads the email address configured in package.json and the package names that have fundoss enabled. This data is then used to send an email to the email address with funding options. That's it.
+We commit to **NEVER** selling advertising or provide any data to 3rd parties. This project is OSS, you can view the upload code used which uploads the email address configured in package.json and the package names that have fundoss enabled. This data is then used to generate an OSS **Value Board** and (if provided) send an email to the Product Owner with a **Value Statement**. That's it.
 
-**No data is sent without the permission of the Project Owner** This permission is granted by the addition of an email address to `package.json` e.g. `{ "fundoss": "support@business.com" }. A message to prompt adding this configuration is output to the developer terminal if this information is missing.
+**No identifiable data is sent** Permission to send an email is given when it is added to `package.json`
+
+A message to prompt adding an email is output to the developer terminal if this information is missing.
 
 ## Product Developers
 
-Please help support OSS by enabling us to inform your business about the amazing OSS packages used by your company. Enter the support or sales email address into your products package.json so we can inform your business about the many benefits of OSS and why they should support OSS. And if that's not enough... let us inform you, the developer, of the valuable work, like major updates to these OSS packages looking for support. Enter your email to get informed of package updates.
+Please help support OSS by enabling us to inform your business about the amazing value OSS packages used by your company provide.
 
-*package.json*
+Enter the support or sales email address of the product into package.json so we can inform your business about the many benefits of OSS and why they should support OSS.
+
+Edit `package.json` and add the following line and adjust the email address.
 
 ```
 {
-    "fundoss": "support@business.com",
-    "fundoss-developer": "tech@business.com"
+    "fundoss": "support@product.com"
 }
 ```
 
+**fundoss**
+
+Email address used to send a **Value Statement**
+
 ## OSS Developers
 
-Add `fundoss` to your project and let us raise awareness of your OSS package to business and create an economic model for your OSS package to thrive.
+Add `fundoss` to your package and let us raise awareness of your OSS package to business and create an economic model for your OSS package to thrive. 
+
+If you exclude --dev fundoss will collect usage stats in the product's production environment (assuming the package is also used in the product dependancies.)
 
 ```
 yarn add fundoss --dev
@@ -41,15 +50,15 @@ Create `fundoss.json` in your package root folder.
 }
 ```
 
-Example fundoss.json
+**checkout**
 
-```
-{
-    "checkout": "https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJYKEMPA"
-}
-```
+This is a link we will include as part of the **Value Statement** and **Value Board**
 
-## How to generate a checkout link with Square?
+E.g. We use a checkout link from SquareUp
+https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJYKEMPA
+
+
+## How to generate a checkout link with SquareUp
 
 Go to https://squareup.com/ and click get started to generate a checkout link.
 
@@ -65,7 +74,8 @@ https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJY
 
 - Build and strengthen the OSS community and avoid [this](https://github.com/pedronauck/docz/issues/1634).
 - Inspired in part by the [experiment by Feross](https://feross.org/funding-experiment-recap/)
-- You don't have to look far for very popular underfunded projects like the [OpenLayers](https://github.com/openlayers/openlayers) package with 8K stars, used for mapping in the browser. Despite a large community it is maintained by just a few dedicated individuals, all with other jobs. It has about 100,000 weekly downloads on NPM, yet the OpenCollective funding amounts to less than two coffees a day (~$8). Another example is [MouseTrap](https://github.com/ccampbell/mousetrap), 10K stars and a [Github issue lists](https://github.com/ccampbell/mousetrap/issues) full of feature requests that are unanswered by maintainers. No releases to MouseTrap in over 6 months and no major commits in well over a year with some features broken in major browsers.
+- You don't have to look far for very popular underfunded projects like the [OpenLayers](https://github.com/openlayers/openlayers) package with 8K stars, used for mapping in the browser. Despite a large community it is maintained by just a few dedicated individuals, all with other jobs. It has about 100,000 weekly downloads on NPM, yet the OpenCollective funding amounts to less than two coffees a day (~$8). 
+- Another example is [MouseTrap](https://github.com/ccampbell/mousetrap), 10K stars and a [Github issue lists](https://github.com/ccampbell/mousetrap/issues) full of feature requests that are unanswered by maintainers. No releases to MouseTrap in over 6 months and no major commits in well over a year with some features broken in major browsers.
 
 ## Definitions
 
@@ -74,6 +84,8 @@ https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJY
 - [Product](https://en.wikipedia.org/wiki/Product_(business)): A commercial offering owned and sold by a Business.
 - [Product Owner](https://en.wikipedia.org/wiki/Scrum_(software_development)#Product_owner): A person/individual in an organisation responsible for the success of a Product that utilises OSS.
 - [Funding](https://en.wikipedia.org/wiki/Funding): Income received by the OSS maintainers from a Business using OSS as part of their Product.
+- Value Board: This is a webpage that gives an indication of the value recevied by the Product Owners for specific OSS packages.
+- Value Statement: This is typically a statement around the value of specific OSS and how to fund OSS.
 
 ## What are the project goals?
 
@@ -85,8 +97,8 @@ https://checkout.square.site/merchant/ML4X3BAXV8YM9/checkout/ZEOXA25XTXWPMRKEZJY
 
 ## How does it work?
 
-- When a developer builds their project this package will search for fundoss.json files in node_modules and send the product owners email and the package names to our AWS lambda function.
-- This info will be collated and an email will be sent out at most once a week to the Product Owners with some messaging about OSS funding.
+- When a developer builds their project this package will search for `fundoss.json` files in node_modules and send the product owners email (or IP Address if this is missing) and the package names to our AWS lambda function.
+- This info will be collated and used to build a **Value Board** and send an email (at most once a week) to the Product Owners with some messaging about OSS funding.
 
 ## What is communicated?
 
